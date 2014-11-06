@@ -1,0 +1,25 @@
+{
+  "name": "lightfox",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jspizziri/lightfox",
+  "authors": [
+    "Jacob Spizziri <jacob.spizziri@gmail.com>"
+  ],
+  "description": "Flexible and responsive Lightbox",
+  "main": "lightbox.js",
+  "keywords": [
+    "Lightbox"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+	"dependencies": {
+		"bootstrap": "~3.3.0"
+	}
+}
