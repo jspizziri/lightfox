@@ -9,6 +9,27 @@ and open the template in the editor.
 */
 @color: #000000;
 
+.rgba(@colour, @alpha) {
+	@alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+	@ieAlphaColour: argb(@alphaColour);
+
+	background-color: @colour; // Fallback for older browsers	
+
+	// IE hacks
+	zoom: 1; // hasLayout
+	background-color: transparent\9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 8+
+	filter:  ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})";  // IE 6 & 7 
+
+	background-color: @alphaColour; 	
+}
+
+.box-shadow(@x: 0px; @y: 1px; @blur: 7px; @color: rgba(0,0,0,0.25)) {
+	box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	-webkit-box-shadow: @arguments;
+}
+
 //***********************
 //*  Lightbox Styling
 //***********************/
@@ -79,9 +100,6 @@ div.lb-float {
 					display: inline-block;
 					width: auto;
 					cursor: pointer;
-					.font-serif-weight-style(400);
-					.upper;
-					.em-size(12px);
 				}
 			}
 		}
@@ -117,9 +135,6 @@ div.lb-float.reader {
 					display: inline-block;
 					width: auto;
 					cursor: pointer;
-					.font-serif-weight-style(400);
-					.upper;
-					.em-size(12px);
 				}
 			}
 
