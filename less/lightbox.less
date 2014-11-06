@@ -1,0 +1,169 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 6, 2014, 10:54:59 AM
+    Author     : Jacob Spizziri <jacob.spizziri@gmail.com>
+*/
+@color: #000000;
+
+//***********************
+//*  Lightbox Styling
+//***********************/
+@media (max-width: 767px) {
+	div.lb-float {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+
+	div#lb-frame div.container-fluid {
+		margin-left: inherit;
+		margin-right: inherit;
+	}
+
+	div#lb div#lb-wrapper div.center div.container {
+		padding:50px;
+	}
+
+	div#lb div#lb-wrapper div.center div.container div#lb-frame {
+		padding-left:45px;
+		padding-right:45px;
+	}
+}
+
+/*Lightfox style*/
+
+div#lb-bkg, div.lb-float, div#lb-disable {
+	width:100%;
+	height:100%;
+	position:fixed;
+	opacity: inherit;
+	filter: inherit;
+	top:0;
+	z-index:5000;
+}
+
+
+div.lb-float {
+	overflow-y:scroll;
+
+	div#lb-wrapper {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		display:table;
+
+		div#lb-frame {
+			display: inline-block;
+			padding: 34px 32px;
+			border: 6px solid @color;
+			background-color: white;
+			margin: auto;
+			.box-shadow();
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+
+			position:relative;
+			max-width: 780px;
+			margin: 40px auto;
+
+			div#lb-close {
+				text-align: right;
+				display: inline-block;
+				width: 100%;
+
+				div {
+					display: inline-block;
+					width: auto;
+					cursor: pointer;
+					.font-serif-weight-style(400);
+					.upper;
+					.em-size(12px);
+				}
+			}
+		}
+	}
+}
+
+div.lb-float.reader {
+	div#lb-wrapper {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		display:table;
+
+		div.center {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		div#lb-frame {
+			border: none;
+			background-color: #2d2d2d;
+			max-width: none;
+			width: 100%;
+			height: 70%;
+			padding-top:0px;
+
+			div#lb-close {
+				text-align: right;
+				display: inline-block;
+				width: 100%;
+
+				div {
+					display: inline-block;
+					width: auto;
+					cursor: pointer;
+					.font-serif-weight-style(400);
+					.upper;
+					.em-size(12px);
+				}
+			}
+
+			div#lb-content {
+				height: 100%;
+
+				iframe {
+					width: 100%;
+					height: 100%;
+					background: white;
+				}
+			}
+		}
+	}
+}
+
+div#lb-bkg, div#spinner {
+	.rgba(#FFFFFF,.8);
+
+	&.dark {
+		.rgba(#000000,.8);
+	}
+}
+
+div#spinner.lb-float div#lb-wrapper div#lb-frame {
+	border: none;
+}
+
+#spinner-msg {
+	color: @color;
+}
+
+#lb-wrapper	div.center {
+	width: 100%;
+	height:100%;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+img.spinner {
+	max-width: 100px;
+	width: 100%;
+	padding: 20px;
+}
