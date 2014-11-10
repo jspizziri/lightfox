@@ -9,15 +9,22 @@ LightFox is a responsive and flexible lightbox solution.
   * [Advanced Usage](#advanced-usage)
 
 
-###### Bower Installation:
+### Bower Installation:
+Install lightfox with bower via the following
+
 ```
 bower install lightfox
 ```
 
 
 ### Usage:
+Some basic examples of ways in which lightfox can be invoked.
+
+
 
 ###### Basic Usage (Pt. 1)
+Bind to a DOM element on click, asynchronously load the lightbox content via a REST call.
+
 ```
 var options = {
     bindTo: $('#some-element'), 
@@ -30,7 +37,11 @@ var options = {
 var lb = new LightBox(options);
 ```
 
+
+
 ###### Basic Usage (Pt. 2)
+Manually specify the content of the lightbox and manually initialize it.
+
 ```
 var options = {
     content: '<some>html</some>', // or $('#some-element').html()
@@ -41,7 +52,13 @@ var lb = new LightBox(options);
 
 lb.initLightbox();
 ```
+
+
+
 ###### Advanced Usage
+
+You can customize each phase of execution via the exposed methods.
+
 ```
 	var lb = new LightBox({content: content, effect: LightBox.options.animation.slide.top});
 
