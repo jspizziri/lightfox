@@ -44,11 +44,11 @@ and open the template in the editor.
 		margin-right: inherit;
 	}
 
-	div#lb div#lb-wrapper div.center div.container {
+	div#lb div#lb-wrapper div.center-content div.container {
 		padding:50px;
 	}
 
-	div#lb div#lb-wrapper div.center div.container div#lb-frame {
+	div#lb div#lb-wrapper div.center-content div.container div#lb-frame {
 		padding-left:45px;
 		padding-right:45px;
 	}
@@ -63,6 +63,7 @@ div#lb-bkg, div.lb-float, div#lb-disable {
 	opacity: inherit;
 	filter: inherit;
 	top:0;
+	left:0;
 	z-index:5000;
 }
 
@@ -113,7 +114,7 @@ div.lb-float.reader {
 		position: relative;
 		display:table;
 
-		div.center {
+		div.center-content {
 			padding-left: 0px;
 			padding-right: 0px;
 		}
@@ -167,7 +168,7 @@ div#spinner.lb-float div#lb-wrapper div#lb-frame {
 	color: @color;
 }
 
-#lb-wrapper	div.center {
+#lb-wrapper	div.center-content {
 	width: 100%;
 	height:100%;
 	display:table-cell;

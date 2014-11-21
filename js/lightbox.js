@@ -39,7 +39,7 @@ function LightBox(options) {
 		var box = this.background;
 		box += '<div class="lb-float" id="'+this.lbID+'">';
 		box += '<div id="lb-wrapper">';
-		box += '<div id="lb-wrapper-inner" class="center">';
+		box += '<div id="lb-wrapper-inner" class="center-content">';
 		box += '<div id="lb-frame">';
 		box += '<div id="lb-close"><div>';
 		box += 'close'; //Close button image or content goes here;
