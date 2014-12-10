@@ -41,9 +41,13 @@ function LightBox(options) {
 		box += '<div id="lb-wrapper">';
 		box += '<div id="lb-wrapper-inner" class="center-content">';
 		box += '<div id="lb-frame">';
-		box += '<div id="lb-close"><div>';
-		box += 'close'; //Close button image or content goes here;
-		box += '</div></div>';
+		
+		if(typeof options.showClose === 'undefined' || options.showClose === true) {
+			box += '<div id="lb-close"><div>';
+			box += 'close'; //Close button image or content goes here;
+			box += '</div></div>';
+		}
+		
 		box += '<div id="lb-content">'+this.content+'</div>';
 		box += '</div></div></div></div>';
 		
